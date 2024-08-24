@@ -36,7 +36,7 @@ $(window).resize(function() {
 })(jQuery);
 
 function timeElapse() {
-  var startDate = '2011-08-25';
+  var startDate = '2011-08-25T16:00:00'; // 4 pm
   var current = new Date();
   var seconds = (Date.parse(current) - Date.parse(startDate)) / 1000;
   var days = Math.floor(seconds / (3600 * 24));
@@ -48,6 +48,3 @@ function timeElapse() {
   var text = "THE WORLD JUST GOT LUCKIER SINCE ";
   $("#message-box").html(text);
 }
-
-// Update the display every second
-setInterval(timeElapse, 1000);
